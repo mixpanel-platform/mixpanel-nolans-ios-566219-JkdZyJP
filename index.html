@@ -39,7 +39,7 @@
             
             MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
               eventGraph.MPChart('setData', results);
-              console.log(results.values());
+              // Here we need to get total charge and add it up (total charge per event )
             });
           }
         };
