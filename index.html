@@ -35,6 +35,9 @@
               dateRange = dateSelect.MPDatepicker('value');
 
           if (eventName) {
+            MP.api.propertyValues(event, property, [params], [settings|callback]) {
+              
+            }
             MP.api.segment(eventName, propName, dateRange).done(function(results) {
               eventGraph.MPChart('setData', results);
               //eventTable.MPTable('setData', results);
