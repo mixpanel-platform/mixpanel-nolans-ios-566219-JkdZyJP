@@ -39,7 +39,7 @@
             
             MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
               eventGraph.MPChart('setData', results);
-              //eventTable.MPTable('setData', results);
+              alert(results.values());
             });
           }
         };
