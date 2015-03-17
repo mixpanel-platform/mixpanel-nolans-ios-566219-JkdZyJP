@@ -33,12 +33,11 @@
           var eventName = eventSelect.MPEventSelect('value'),
               propName  = propSelect.MPPropertySelect('value'),
               dateRange = dateSelect.MPDatepicker('value');
-
+          
+          params = {};
           if (eventName) {
-            MP.api.propertyValues(event, property, [params], [settings|callback]) {
-              
-            }
-            MP.api.segment(eventName, propName, dateRange).done(function(results) {
+            
+            MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
               eventGraph.MPChart('setData', results);
               //eventTable.MPTable('setData', results);
             });
