@@ -36,6 +36,8 @@
           
           params = {};
           if (eventName) {
+            
+            // get relevant data 
             MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
               var revs = [];
               for (var rev in results.values()) {
@@ -57,6 +59,8 @@
                 }
               }
             });
+            // totalRevenue is the total revenue per event on a given date range
+            
             /*
             MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
               eventGraph.MPChart('setData', results);
