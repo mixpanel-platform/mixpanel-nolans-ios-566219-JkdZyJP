@@ -37,11 +37,15 @@
           params = {};
           if (eventName) {
             MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
-              var keys = [];
-              for (var key in results.values()) {
-                if (results.values().hasOwnProperty(key)) {
-                  console.log(key);
-                  console.log(results.values()[key]);
+              var revs = [];
+              for (var rev in results.values()) {
+                if (results.values().hasOwnProperty(rev)) {
+                  revs.push(rev);
+                }
+                var totalRevCountPerDay = 0;
+                for(i = 0; i < revs.length; i++) {
+                  // for each rev, go through and tally up all rev counts, then multiply by rev 
+                  console.log(results.values()[revs[i]]);
                 }
               }
             });
