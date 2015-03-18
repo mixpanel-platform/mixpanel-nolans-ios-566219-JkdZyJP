@@ -45,7 +45,9 @@
                 var totalRevCountPerDay = 0;
                 for(i = 0; i < revs.length; i++) {
                   // for each rev, go through and tally up all rev counts, then multiply by rev 
-                  console.log(results.values()[revs[i]]);
+                  for(var date in results.values()[revs[i]]) {
+                    console.log(results.values()[reves[i]][date]);
+                  }
                 }
               }
             });
