@@ -37,7 +37,8 @@
           params = {};
           if (eventName) {
             MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
-              console.log(results.values());
+              var obj = JSON.parse(results.values());
+              alert(obj[0]);
             });
             /*
             MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
