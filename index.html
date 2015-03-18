@@ -48,8 +48,10 @@
                   var totalTransactionCount = 0;
                   for(var date in results.values()[revs[i]]) {
                     totalTransactionCount += results.values()[revs[i]][date];
+                    console.log(totalTransactionCount);
                   }
                   totalRevenue += totalTransactionCount*revs[i];
+                  console.log(totalRevenue);
                 }
               }
             });
