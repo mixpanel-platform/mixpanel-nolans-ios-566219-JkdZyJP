@@ -61,11 +61,12 @@
             });
             // totalRevenue is the total revenue per event on a given date range
             
-            /*
-            MP.api.segment(eventName, "$screen_height", dateRange).done(function(results) {
-              eventGraph.MPChart('setData', results);
-              // Here we need to get total charge and add it up (total charge per event )
-            });*/
+            var data = {
+              eventName: {'date': totalRevenue}
+            }
+            
+            eventGraph.MPChart('setData', data);
+
           }
         };
         
